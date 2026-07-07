@@ -1,0 +1,9 @@
+export { HomeAbout } from "./home-about";
+export { HomeAchievements } from "./home-achievements";
+export { HomeBlogPreview } from "./home-blog-preview";
+export { HomeCTA } from "./home-cta";
+export { HomeFacilities } from "./home-facilities";
+export { HomeHero } from "./home-hero";
+export { HomePrograms } from "./home-programs";
+export { HomeStats } from "./home-stats";
+export { HomeTestimonials } from "./home-testimonials";

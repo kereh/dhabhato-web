@@ -1,0 +1,94 @@
+{
+  "school": {
+    "name": "SMK Dharma Bhakti Tomohon",
+    "shortName": "SMK DHABHATO",
+    "logo": "/smk.jpg",
+    "tagline": "Membangun Masa Depan Gemilang",
+    "description": "Mempersiapkan tenaga terampil, beretika, dan siap kerja melalui pendidikan vokasi yang inovatif dan terhubung dengan dunia industri."
+  },
+  "navigation": [
+    { "title": "Home", "href": "/" },
+    { "title": "About", "href": "/#about" },
+    { "title": "Programs", "href": "/#programs" },
+    { "title": "Blog", "href": "/blog" }
+  ],
+  "stats": [
+    { "label": "Siswa Aktif", "value": "850+" },
+    { "label": "Alumni Bekerja", "value": "92%" },
+    { "label": "Jurusan", "value": "5" },
+    { "label": "Guru & Staff", "value": "45" }
+  ],
+  "about": {
+    "title": "Visi & Misi Kami",
+    "description": "SMK Dharma Bhakti Tomohon berkomitmen untuk menjadi pusat keunggulan pendidikan vokasi di Sulawesi Utara. Kami percaya bahwa setiap siswa memiliki potensi unik yang perlu dibina dengan tepat.",
+    "points": [
+      "Lulusan yang kompeten di bidangnya",
+      "Karakter yang kuat dan berintegritas",
+      "Koneksi yang luas dengan dunia industri",
+      "Lingkungan belajar yang inspiratif"
+    ]
+  },
+  "programs": [
+    {
+      "id": "tkj",
+      "title": "Teknik Komputer & Jaringan",
+      "desc": "Mempelajari instalasi, perbaikan, dan pengelolaan jaringan komputer serta sistem server modern."
+    },
+    {
+      "id": "otomotif",
+      "title": "Teknik Otomotif",
+      "desc": "Fokus pada perawatan dan perbaikan kendaraan ringan, sistem kelistrikan, serta teknologi otomotif terkini."
+    },
+    {
+      "id": "bisnis",
+      "title": "Manajemen Bisnis",
+      "desc": "Membentuk kemampuan manajerial, strategi pemasaran digital, wirausaha, serta administrasi profesional."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Jessica Moningka",
+      "role": "Alumni TKJ 2022",
+      "quote": "SMK Dhabhato memberikan fondasi yang kuat untuk karir saya di dunia IT. Sekarang saya bekerja sebagai Network Engineer di perusahaan multinasional.",
+      "rating": 5
+    },
+    {
+      "name": "Rizky Tamuntuan",
+      "role": "Alumni Otomotif 2021",
+      "quote": "Pengalaman belajar di bengkel sekolah sangat hands-on. Guru-guru sangat kompeten dan selalu mendukung kami untuk berkembang.",
+      "rating": 5
+    },
+    {
+      "name": "Priscilla Wenas",
+      "role": "Alumni Bisnis 2023",
+      "quote": "Program kewirausahaan di SMK Dhabhato membantu saya memulai bisnis online sendiri bahkan sebelum lulus. Terima kasih guru-guru tercinta!",
+      "rating": 5
+    }
+  ],
+  "achievements": [
+    { "title": "Juara 1 LKS Tingkat Provinsi", "year": "2025" },
+    { "title": "Akreditasi A — BAN-SMK", "year": "2024" },
+    { "title": "Sekolah Adiwiyata Nasional", "year": "2024" },
+    { "title": "Best Vocational School — Sulut", "year": "2025" },
+    { "title": "Juara 2 Olimpiade Sains Kota", "year": "2025" },
+    { "title": "100% Kelulusan Nasional", "year": "2026" },
+    { "title": "Penghargaan Sekolah Sehat", "year": "2024" },
+    { "title": "Juara 1 Lomba Debat Antar SMK", "year": "2025" }
+  ],
+  "cta": {
+    "title": "Gabung Bersama Kami",
+    "description": "Mulailah perjalanan karirmu bersama SMK Dharma Bhakti Tomohon. Pendaftaran online tahun ajaran baru sudah dibuka.",
+    "buttonText": "Daftar Sekarang"
+  },
+  "contact": {
+    "address": "Jl. Raya Tomohon - Tondano, Tomohon, Sulawesi Utara, Indonesia",
+    "phone": "+62 431 123456",
+    "email": "info@smkdhabhato.sch.id",
+    "mapUrl": "#"
+  },
+  "socials": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
+  }
+}
