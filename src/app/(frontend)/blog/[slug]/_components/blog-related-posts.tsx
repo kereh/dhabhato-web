@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { formatDate, type StrapiPost, strapiImageUrl } from "@/lib/strapi";
+import { formatDate, getPostImageUrl, type Post } from "@/lib/blog";
 
 interface BlogRelatedPostsProps {
-  relatedPosts: StrapiPost[];
+  relatedPosts: Post[];
 }
 
 export function BlogRelatedPosts({ relatedPosts }: BlogRelatedPostsProps) {
@@ -34,7 +34,7 @@ export function BlogRelatedPosts({ relatedPosts }: BlogRelatedPostsProps) {
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {relatedPosts.map((related) => {
-          const relatedImg = strapiImageUrl(related.cover);
+          const relatedImg = getPostImageUrl(related.cover);
           return (
             <Link
               key={related.documentId}

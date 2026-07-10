@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import type { StrapiPost } from "@/lib/strapi";
+import type { Post } from "@/lib/blog";
 
 interface TextChild {
   type: "text";
@@ -26,6 +26,8 @@ interface BlockNode {
   children?: InlineChild[];
   level?: number;
   format?: string;
+  tag?: string;
+  listType?: string;
   image?: {
     url: string;
     alternativeText?: string;
@@ -70,7 +72,8 @@ function renderBlock(block: BlockNode, i: number) {
 
   switch (block.type) {
     case "heading": {
-      const Tag = `h${block.level || 2}` as keyof React.JSX.IntrinsicElements;
+      const Tag = (block.tag ||
+        `h${block.level || 2}`) as keyof React.JSX.IntrinsicElements;
       return (
         <Tag
           key={i}
@@ -87,7 +90,7 @@ function renderBlock(block: BlockNode, i: number) {
         </p>
       );
     case "list":
-      if (block.format === "ordered") {
+      if (block.format === "ordered" || block.listType === "number") {
         return (
           <ol key={i} className="list-decimal pl-6 mb-5 space-y-2">
             {block.children?.map((child, j) =>
@@ -103,6 +106,7 @@ function renderBlock(block: BlockNode, i: number) {
           )}
         </ul>
       );
+    case "listitem":
     case "list-item":
       return (
         <li key={i} className="leading-relaxed">
@@ -122,13 +126,7 @@ function renderBlock(block: BlockNode, i: number) {
       const imgUrl = block.image?.url;
       if (!imgUrl) return null;
 
-      let resolvedUrl = imgUrl;
-      if (imgUrl.startsWith("/uploads/")) {
-        resolvedUrl = `/strapi-uploads${imgUrl.replace("/uploads", "")}`;
-      } else if (imgUrl.startsWith("/")) {
-        const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
-        resolvedUrl = `${STRAPI_URL}${imgUrl}`;
-      }
+      const resolvedUrl = imgUrl;
 
       return (
         <figure
@@ -167,11 +165,7 @@ function renderBlock(block: BlockNode, i: number) {
   }
 }
 
-export function BlocksRenderer({
-  content,
-}: {
-  content: StrapiPost["content"];
-}) {
+export function BlocksRenderer({ content }: { content: Post["content"] }) {
   if (!content || !Array.isArray(content)) return null;
   return (
     <div className="prose-custom">

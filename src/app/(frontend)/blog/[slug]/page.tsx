@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BlocksRenderer } from "@/components/blog/blocks-renderer";
-import { getPostBySlug, getPosts, strapiImageUrl } from "@/lib/strapi";
+import { getPostImageUrl } from "@/lib/blog";
+import { getPostBySlug, getPosts } from "@/lib/blog-server";
 import { BlogPostHeader, BlogRelatedPosts } from "./_components";
 
 export const revalidate = 60;
@@ -18,7 +19,7 @@ export default async function BlogPost({
     notFound();
   }
 
-  const imageUrl = strapiImageUrl(post.cover);
+  const imageUrl = getPostImageUrl(post.cover);
   const wordCount = post.excerpt?.split(/\s+/).length || 0;
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 

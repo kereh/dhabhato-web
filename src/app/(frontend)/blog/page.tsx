@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { getPosts } from "@/lib/strapi";
+import { getPosts } from "@/lib/blog-server";
 import { BlogArticleCard, BlogSearchBar } from "./_components";
 
 export const revalidate = 60;
@@ -34,7 +34,7 @@ export default async function BlogPage() {
             Belum ada artikel yang dipublikasikan.
           </p>
           <p className="text-sm text-muted-foreground/75 mt-2">
-            Silakan tambahkan artikel di Strapi CMS.
+            Silakan tambahkan artikel di CMS Admin Panel.
           </p>
         </div>
       ) : (

@@ -54,6 +54,7 @@ export function Navbar() {
               width={36}
               height={36}
               className="rounded-full"
+              style={{ width: "auto", height: "auto" }}
             />
             <span className="font-bold text-lg tracking-tight text-primary">
               {school.shortName}
@@ -116,6 +117,7 @@ export function Navbar() {
                     width={40}
                     height={40}
                     className="rounded-full"
+                    style={{ width: "auto", height: "auto" }}
                   />
                   <div className="flex flex-col leading-tight text-left">
                     <span className="font-bold text-primary">

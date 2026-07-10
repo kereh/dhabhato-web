@@ -12,10 +12,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { formatDate, type StrapiPost } from "@/lib/strapi";
+import { formatDate, type Post } from "@/lib/blog";
 
 interface HomeBlogPreviewProps {
-  latestPosts: StrapiPost[];
+  latestPosts: Post[];
 }
 
 const containerVariants = {

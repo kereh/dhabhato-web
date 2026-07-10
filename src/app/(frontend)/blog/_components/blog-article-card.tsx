@@ -1,7 +1,6 @@
 import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,14 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { formatDate, type StrapiPost, strapiImageUrl } from "@/lib/strapi";
+import { formatDate, getPostImageUrl, type Post } from "@/lib/blog";
 
 interface BlogArticleCardProps {
-  post: StrapiPost;
+  post: Post;
 }
 
 export function BlogArticleCard({ post }: BlogArticleCardProps) {
-  const imageUrl = strapiImageUrl(post.cover);
+  const imageUrl = getPostImageUrl(post.cover);
 
   return (
     <Link

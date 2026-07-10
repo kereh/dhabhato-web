@@ -1,10 +1,10 @@
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { formatDate, type StrapiPost } from "@/lib/strapi";
+import { formatDate, type Post } from "@/lib/blog";
 
 interface BlogPostHeaderProps {
-  post: StrapiPost;
+  post: Post;
   readTime: number;
 }
 

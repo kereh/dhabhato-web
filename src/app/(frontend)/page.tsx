@@ -1,4 +1,4 @@
-import { getPosts } from "@/lib/strapi";
+import { getPosts } from "@/lib/blog-server";
 import {
   HomeAbout,
   HomeAchievements,
